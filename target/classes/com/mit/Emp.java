@@ -1,14 +1,23 @@
 package com.mit;
 
-public class Emp {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "EmpTable")
+public class Emp {
 	
-		
+		@Id
+		@Column(name ="id")
 		private int sid;
+		@Column(name ="name")
 		private String sname;
+		@Column(name ="addrs")
 		private String addrs;
 		
-		public Employee() {
+		public Emp() {
 			super();
 		}
 
